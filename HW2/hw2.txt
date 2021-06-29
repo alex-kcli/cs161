@@ -1,0 +1,57 @@
+Kangcheng Li
+HW2
+CS161
+----------
+
+Question 1
+----------
+
+[2]> (BFS '(ROOT))
+(ROOT)
+
+[3]> (BFS '((((L E) F) T)))
+(T F L E)
+
+[4]> (BFS '((R (I (G (H T))))))
+(R I G H T)
+
+[5]> (BFS '(((A (B)) C (D))))
+(C A D B)
+
+[6]> (BFS '((T (H R E) E)))
+(T E H R E)
+
+[7]> (BFS '((A ((C ((E) D)) B))))
+(A B C D E)
+
+
+
+Question 2
+----------
+
+[8]> (DFS '(nil nil nil nil) nil)
+((NIL NIL NIL NIL) (T T NIL NIL) (NIL T NIL NIL) (T T T NIL) (NIL NIL T NIL)
+ (T NIL T T) (NIL NIL T T) (T T T T))
+
+[9]> (DFS '(nil nil T nil) nil)
+((NIL NIL T NIL) (T T T NIL) (NIL T NIL NIL) (T T NIL T) (NIL NIL NIL T)
+ (T NIL T T) (NIL NIL T T) (T T T T))
+
+[10]> (DFS '(nil nil T T) nil)
+((NIL NIL T T) (T T T T))
+
+[11]> (DFS '(nil T T T) nil)
+NIL
+
+[12]> (DFS '(T T T T) nil)
+((T T T T))
+
+[13]> (DFS '(T T nil nil) nil)
+((T T NIL NIL) (NIL T NIL NIL) (T T T NIL) (NIL NIL T NIL) (T NIL T T)
+ (NIL NIL T T) (T T T T))
+
+[14]> (DFS '(nil T nil nil) '((T T nil nil)))
+((T T NIL NIL) (NIL T NIL NIL) (T T T NIL) (NIL NIL T NIL) (T NIL T T)
+ (NIL NIL T T) (T T T T))
+
+
